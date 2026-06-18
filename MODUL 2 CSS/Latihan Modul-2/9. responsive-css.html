@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Praktikum 9 - Responsive Design</title>
+    <style>
+        /* --- GAYA DEFAULT (UNTUK DESKTOP) --- */
+        body {
+            background-color: lightblue; 
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            transition: background-color 0.4s ease;
+        }
+
+        
+        .teks-dinamis {
+            font-size: 2.8rem; 
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 15px;
+        }
+
+        .grid-item {
+            background-color: #2196F3;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        
+        @media only screen and (max-width: 600px) {
+            body {
+                background-color: lightcoral; 
+            }
+
+            .teks-dinamis {
+                font-size: 1.6rem;
+            }
+
+            .grid-container {
+                grid-template-columns: 1fr; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="teks-dinamis"> KOLOM YANG DI BUAT AULIA</h1>
+    
+    <div class="grid-container">
+        <div class="grid-item">Kolom Pertama</div>
+        <div class="grid-item">Kolom Kedua</div>
+        <div class="grid-item">Kolom Ketiga</div>
+    </div>
+
+</body>
+</html>
