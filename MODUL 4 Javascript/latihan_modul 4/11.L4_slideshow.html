@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image Slideshow</title>
+</head>
+
+<body>
+
+    <h2>Galeri Gambar</h2>
+
+    <img id="slideshow-image" src="" alt="Slideshow" width="500">
+
+    <br><br>
+
+    <button onclick="gantiGambar(-1)">Previous</button>
+    <button onclick="gantiGambar(1)">Next</button>
+
+    <script>
+
+        var gambar = [
+
+            "https://i.pinimg.com/736x/e4/f0/27/e4f0270d3e1ce8b4aeefe601076f4c2e.jpg",
+
+            "https://i.pinimg.com/736x/93/db/c2/93dbc2c52df623e4fd95b455601d50b8.jpg",
+
+            "https://i.pinimg.com/736x/57/a0/12/57a01220653971e4e2cff753fa272479.jpg",
+
+            "https://i.pinimg.com/webp/736x/31/74/64/317464db0f91b50eed13ff697983ebdb.webp",
+
+            "https://i.pinimg.com/736x/99/14/0c/99140ca2a4442530869b8a8cfbf8bd03.jpg"
+
+        ];
+
+        var indexGambar = 0;
+
+        var imageElement = document.getElementById("slideshow-image");
+
+        function tampilkanGambar() {
+
+            imageElement.src = gambar[indexGambar];
+
+        }
+
+        function gantiGambar(arah) {
+
+            indexGambar += arah;
+
+            if (indexGambar >= gambar.length) {
+                indexGambar = 0;
+            }
+
+            if (indexGambar < 0) {
+                indexGambar = gambar.length - 1;
+            }
+
+            tampilkanGambar();
+        }
+
+        tampilkanGambar();
+
+    </script>
+
+</body>
+
+</html>

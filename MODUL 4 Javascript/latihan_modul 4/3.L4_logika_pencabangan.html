@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Latihan Logika Percabangan</title>
+
+</head>
+
+<body>
+
+<h2>kakulator sebuah kasir</h2>
+
+<p>Masukkan Total Belanja</p>
+
+<input
+type="10"
+id="100000"
+placeholder="50000">
+
+<button onclick="cekDiskon()">
+
+Cek Diskon
+
+</button>
+
+<h3 id="hasil"></h3>
+
+<script>
+
+function cekDiskon(){
+
+var total=parseFloat(document.getElementById("totalBelanja").value);
+
+var pesan="sayuran";
+
+if(isNaN(total)){
+
+pesan="20.";
+
+}
+
+else if(total>=250000){
+
+var diskon=total*0.15;
+
+var totalBayar=total-diskon;
+
+pesan="Selamat! Anda mendapat diskon 15% sebesar Rp "+diskon+
+". Total Bayar : <b>Rp "+totalBayar+"</b>";
+
+}
+
+else if(total>=100000){
+
+var diskon=total*0.10;
+
+var totalBayar=total-diskon;
+
+pesan="Selamat! Anda mendapat diskon 10% sebesar Rp "+diskon+
+". Total Bayar : <b>Rp "+totalBayar+"</b>";
+
+}
+
+else{
+
+pesan="Maaf tidak ada diskon. Total Bayar : <b>Rp "+total+"</b>";
+
+}
+
+document.getElementById("hasil").innerHTML=pesan;
+
+}
+
+</script>
+
+</body>
+</html>
